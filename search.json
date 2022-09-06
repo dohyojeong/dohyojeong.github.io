@@ -4,7 +4,7 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "1 + 1\n\n[1] 2"
+    "text": "### More Information\nInterests:\n* Policy Analysis\n* Public Health Policy\n* Data Science\n* Time series modeling\n* Geographic Information Science\n### Contact me\n[dohyo91@gmail.com]\n[Website](https://dohyojeong.github.io)\n\n1 + 1\n\n[1] 2"
   },
   {
     "objectID": "index.html",
@@ -14,10 +14,17 @@
     "text": "# install.packages(\"ggplot2\")\n# load package and data\noptions(scipen=999)  # turn-off scientific notation like 1e+48\nlibrary(ggplot2)\ntheme_set(theme_bw())  # pre-set the bw theme.\ndata(\"midwest\", package = \"ggplot2\")\n# midwest <- read.csv(\"http://goo.gl/G1K41K\")  # bkup data source\n\n# Scatterplot\ngg <- ggplot(midwest, aes(x=area, y=poptotal)) + \n  geom_point(aes(col=state, size=popdensity)) + \n  geom_smooth(method=\"loess\", se=F) + \n  xlim(c(0, 0.1)) + \n  ylim(c(0, 500000)) + \n  labs(subtitle=\"Area Vs Population\", \n       y=\"Population\", \n       x=\"Area\", \n       title=\"Scatterplot Sample Code\", \n       caption = \"Source: midwest\")\n\nplot(gg)\n\n`geom_smooth()` using formula 'y ~ x'\n\n\nWarning: Removed 15 rows containing non-finite values (stat_smooth).\n\n\nWarning: Removed 15 rows containing missing values (geom_point)."
   },
   {
+    "objectID": "project.html",
+    "href": "project.html",
+    "title": "project",
+    "section": "",
+    "text": "- Research Assistant, University of Texas at Dallas\n\nCombining and managing Nigerian tuberculosis data\nDisease distribution mapping and pattern analysis\nEWORS system effectiveness analysis and evaluation\nSystem effect mapping and geospatial analysis\n\n\nEmergency Medical System (EMS) Policy Implementation Evaluation and Efficiency Analysis in Nigeria\n- Research Assistant, University of Texas at Dallas\n\n\nNigeria traffic accident information mapping and data management\nAmbulance Reaction Time Patterns and Statistical Analysis\nAnalysis and evaluation of traffic policy effects\n\n\nResearch Assistant, SUNGKYUNKWAN UNIVERSITY/NATIONAL RESEARCH FOUNDATION OF KOREA\n\nProject Title: \"BK21 Plus (Brain Korea 21 Plus): Pursuing an Empathic Government Through Convergent Leadership Development Program\"\n 1) Party of support: National Research Foundation of Korea\n\nResponsibilities:\n\n\nDiagnosis and development of problems in interdisciplinary convergence research\n\n\nCompare the concept of 'Publicity' in the West and the East, and study the definition of publicity in Korean Public Administration\nCompare the bureaucracy theory of the Oriental administration Philosopher Han Feizi and the bureaucracy theory of Max Weber in the West, and derive various implications for application to modern bureaucracy\n\n\nAnalysisand evaluation of the influence of government trust\n\n\nStudy the influence of tax recognition and government trust on the welfare policy attitude\n\n\n1 + 1\n\n[1] 2"
+  },
+  {
     "objectID": "research.html",
     "href": "research.html",
     "title": "research",
     "section": "",
-    "text": "1 + 1\n\n[1] 2"
+    "text": "[4] DOHYO JEONG, CHANG-JIN KIM, SUHO BAE. (2019). A Study on Determinants of Tax Attitude: Focusing on Slippery Slope Framework, Public Policy Review, Vol.33 No.3: 43-72.\n[3] CHANG-JIN KIM, DOHYO JEONG, SUNG-WOO HONG. (2019). The Effects of Decentralization Perception on the Recognition of Intergovernmental Relationship: Focusing on Mediating Effect of Dispute Settlement System - Journal of Local Government Studies.Vol.31 No.3: 1-35.\n[2] DOHYO JEONG, YOUNGKYU LEE, SEONGYOUNG JEONG. (2018). An Analysis of the Effect of the Tax Rate on the Financial Efficiency of Local Governments. The Korea Journal of Local Government Studies, Vol.22 No.3: 415-443.\n[1] Dae-yong Hyun, DOHYO JEONG, (2017). Analysis of differences in perception of administrative values among civil servants and general civil servants: Focused on Suwon City Government Officials. Suwon Research Institute. No. 12: 119-141.\n\n1 + 1\n\n[1] 2"
   }
 ]

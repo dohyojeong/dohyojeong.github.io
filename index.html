@@ -145,10 +145,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <a class="nav-link" href="./research.html">Research</a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./project.qmd">Project</a>
+    <a class="nav-link" href="./project.html">Project</a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./cv.pdf">CV</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./assignment1.html">assignment1</a>
   </li>  
 </ul>
               <div id="quarto-search" class="" title="Search"></div>
@@ -182,29 +185,45 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </header>
 
-<p>This is Dohyo Jeong’s website.</p>
+<pre><code>I am a Ph.D. candidate studying the Public Policy and Political Economy. My research topic is on Public Health Policy, Machine Learning, Geographic Information Science
+
+### More Information
+
+Interests:
+
+  * Policy Analysis
+  * Public Health Policy
+  * Data Science 
+  * Time series modeling
+  * Geographic Information Science
+
+### Contact me
+
+[dohyo91@gmail.com]
+
+[Website](https://dohyojeong.github.io)  </code></pre>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages("ggplot2")</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># load package and data</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">scipen=</span><span class="dv">999</span>)  <span class="co"># turn-off scientific notation like 1e+48</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">theme_set</span>(<span class="fu">theme_bw</span>())  <span class="co"># pre-set the bw theme.</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(<span class="st">"midwest"</span>, <span class="at">package =</span> <span class="st">"ggplot2"</span>)</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># midwest &lt;- read.csv("http://goo.gl/G1K41K")  # bkup data source</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Scatterplot</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>gg <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(midwest, <span class="fu">aes</span>(<span class="at">x=</span>area, <span class="at">y=</span>poptotal)) <span class="sc">+</span> </span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">col=</span>state, <span class="at">size=</span>popdensity)) <span class="sc">+</span> </span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method=</span><span class="st">"loess"</span>, <span class="at">se=</span>F) <span class="sc">+</span> </span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.1</span>)) <span class="sc">+</span> </span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylim</span>(<span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">500000</span>)) <span class="sc">+</span> </span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">subtitle=</span><span class="st">"Area Vs Population"</span>, </span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>       <span class="at">y=</span><span class="st">"Population"</span>, </span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>       <span class="at">x=</span><span class="st">"Area"</span>, </span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>       <span class="at">title=</span><span class="st">"Scatterplot Sample Code"</span>, </span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>       <span class="at">caption =</span> <span class="st">"Source: midwest"</span>)</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(gg)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages("ggplot2")</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># load package and data</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">scipen=</span><span class="dv">999</span>)  <span class="co"># turn-off scientific notation like 1e+48</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">theme_set</span>(<span class="fu">theme_bw</span>())  <span class="co"># pre-set the bw theme.</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(<span class="st">"midwest"</span>, <span class="at">package =</span> <span class="st">"ggplot2"</span>)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># midwest &lt;- read.csv("http://goo.gl/G1K41K")  # bkup data source</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Scatterplot</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>gg <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(midwest, <span class="fu">aes</span>(<span class="at">x=</span>area, <span class="at">y=</span>poptotal)) <span class="sc">+</span> </span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">col=</span>state, <span class="at">size=</span>popdensity)) <span class="sc">+</span> </span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method=</span><span class="st">"loess"</span>, <span class="at">se=</span>F) <span class="sc">+</span> </span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.1</span>)) <span class="sc">+</span> </span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylim</span>(<span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">500000</span>)) <span class="sc">+</span> </span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">subtitle=</span><span class="st">"Area Vs Population"</span>, </span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>       <span class="at">y=</span><span class="st">"Population"</span>, </span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>       <span class="at">x=</span><span class="st">"Area"</span>, </span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>       <span class="at">title=</span><span class="st">"Scatterplot Sample Code"</span>, </span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>       <span class="at">caption =</span> <span class="st">"Source: midwest"</span>)</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(gg)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>`geom_smooth()` using formula 'y ~ x'</code></pre>
 </div>
