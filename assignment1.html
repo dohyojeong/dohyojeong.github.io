@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.0.36">
+<meta name="generator" content="quarto-1.1.189">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,15 @@
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-span.underline{text-decoration: underline;}
-div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -54,7 +59,7 @@ code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
 code span.at { color: #7d9029; } /* Attribute */
 code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
+code span.bu { color: #008000; } /* BuiltIn */
 code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4070a0; } /* Char */
 code span.cn { color: #880000; } /* Constant */
@@ -67,7 +72,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #40a070; } /* Float */
 code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
+code span.im { color: #008000; font-weight: bold; } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #007020; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -128,9 +133,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
-      <a class="navbar-brand" href="./index.html">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Dohyo Jeong</span>
-  </a>
+    </a>
+  </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
@@ -177,6 +184,26 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <a class="dropdown-item" href="./assignment5.html">
  <span class="dropdown-text">assignment5</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="./assignment6.html">
+ <span class="dropdown-text">assignment6</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./assignment7.html">
+ <span class="dropdown-text">assignment7</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./assignment8.html">
+ <span class="dropdown-text">assignment8</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./assignment9.html">
+ <span class="dropdown-text">assignment9</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./assignment10.html">
+ <span class="dropdown-text">assignment10</span></a>
+  </li>  
     </ul>
   </li>
 </ul>
@@ -190,7 +217,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc">
+        <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
@@ -259,6 +286,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <pre><code>Warning: package 'tidyverse' was built under R version 4.0.5</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
+<pre><code>Warning: replacing previous import 'lifecycle::last_warnings' by
+'rlang::last_warnings' when loading 'pillar'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: replacing previous import 'lifecycle::last_warnings' by
+'rlang::last_warnings' when loading 'tibble'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: replacing previous import 'lifecycle::last_warnings' by
+'rlang::last_warnings' when loading 'hms'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
 <pre><code>-- Attaching packages --------------------------------------- tidyverse 1.3.1 --</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
@@ -284,70 +323,70 @@ v readr   1.4.0     v forcats 0.5.1</code></pre>
 x dplyr::filter() masks stats::filter()
 x dplyr::lag()    masks stats::lag()</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Define elements in plant art</span></span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Each image corresponds to a different axiom, rules, angle and depth</span></span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Leaf of Fall</span></span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>axiom<span class="ot">=</span><span class="st">"X"</span></span>
-<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>rules<span class="ot">=</span><span class="fu">list</span>(<span class="st">"X"</span><span class="ot">=</span><span class="st">"F-[[X]+X]+F[+FX]-X"</span>, <span class="st">"F"</span><span class="ot">=</span><span class="st">"FF"</span>)</span>
-<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>angle<span class="ot">=</span><span class="fl">22.5</span></span>
-<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>depth<span class="ot">=</span><span class="dv">6</span></span>
-<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>depth) axiom<span class="ot">=</span><span class="fu">gsubfn</span>(<span class="st">"."</span>, rules, axiom)</span>
-<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>actions<span class="ot">=</span><span class="fu">str_extract_all</span>(axiom, <span class="st">"</span><span class="sc">\\</span><span class="st">d*</span><span class="sc">\\</span><span class="st">+|</span><span class="sc">\\</span><span class="st">d*</span><span class="sc">\\</span><span class="st">-|F|L|R|</span><span class="sc">\\</span><span class="st">[|</span><span class="sc">\\</span><span class="st">]|</span><span class="sc">\\</span><span class="st">|"</span>) <span class="sc">%&gt;%</span> unlist</span>
-<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a>status<span class="ot">=</span><span class="fu">data.frame</span>(<span class="at">x=</span><span class="fu">numeric</span>(<span class="dv">0</span>), <span class="at">y=</span><span class="fu">numeric</span>(<span class="dv">0</span>), <span class="at">alfa=</span><span class="fu">numeric</span>(<span class="dv">0</span>))</span>
-<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a>points<span class="ot">=</span><span class="fu">data.frame</span>(<span class="at">x1 =</span> <span class="dv">0</span>, <span class="at">y1 =</span> <span class="dv">0</span>, <span class="at">x2 =</span> <span class="cn">NA</span>, <span class="at">y2 =</span> <span class="cn">NA</span>, <span class="at">alfa=</span><span class="dv">90</span>, <span class="at">depth=</span><span class="dv">1</span>)</span>
-<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Generating data</span></span>
-<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Note: may take a minute or two</span></span>
-<span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-25"><a href="#cb14-25" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (action <span class="cf">in</span> actions)</span>
-<span id="cb14-26"><a href="#cb14-26" aria-hidden="true" tabindex="-1"></a>{</span>
-<span id="cb14-27"><a href="#cb14-27" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (action<span class="sc">==</span><span class="st">"F"</span>)</span>
-<span id="cb14-28"><a href="#cb14-28" aria-hidden="true" tabindex="-1"></a>  {</span>
-<span id="cb14-29"><a href="#cb14-29" aria-hidden="true" tabindex="-1"></a>    x<span class="ot">=</span>points[<span class="dv">1</span>, <span class="st">"x1"</span>]<span class="sc">+</span><span class="fu">cos</span>(points[<span class="dv">1</span>, <span class="st">"alfa"</span>]<span class="sc">*</span>(pi<span class="sc">/</span><span class="dv">180</span>))</span>
-<span id="cb14-30"><a href="#cb14-30" aria-hidden="true" tabindex="-1"></a>    y<span class="ot">=</span>points[<span class="dv">1</span>, <span class="st">"y1"</span>]<span class="sc">+</span><span class="fu">sin</span>(points[<span class="dv">1</span>, <span class="st">"alfa"</span>]<span class="sc">*</span>(pi<span class="sc">/</span><span class="dv">180</span>))</span>
-<span id="cb14-31"><a href="#cb14-31" aria-hidden="true" tabindex="-1"></a>    points[<span class="dv">1</span>,<span class="st">"x2"</span>]<span class="ot">=</span>x</span>
-<span id="cb14-32"><a href="#cb14-32" aria-hidden="true" tabindex="-1"></a>    points[<span class="dv">1</span>,<span class="st">"y2"</span>]<span class="ot">=</span>y</span>
-<span id="cb14-33"><a href="#cb14-33" aria-hidden="true" tabindex="-1"></a>    <span class="fu">data.frame</span>(<span class="at">x1 =</span> x, <span class="at">y1 =</span> y, <span class="at">x2 =</span> <span class="cn">NA</span>, <span class="at">y2 =</span> <span class="cn">NA</span>,</span>
-<span id="cb14-34"><a href="#cb14-34" aria-hidden="true" tabindex="-1"></a>               <span class="at">alfa=</span>points[<span class="dv">1</span>, <span class="st">"alfa"</span>],</span>
-<span id="cb14-35"><a href="#cb14-35" aria-hidden="true" tabindex="-1"></a>               <span class="at">depth=</span>points[<span class="dv">1</span>,<span class="st">"depth"</span>]) <span class="sc">%&gt;%</span> <span class="fu">rbind</span>(points)<span class="ot">-&gt;</span>points</span>
-<span id="cb14-36"><a href="#cb14-36" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb14-37"><a href="#cb14-37" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (action <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"+"</span>, <span class="st">"-"</span>)){</span>
-<span id="cb14-38"><a href="#cb14-38" aria-hidden="true" tabindex="-1"></a>    alfa<span class="ot">=</span>points[<span class="dv">1</span>, <span class="st">"alfa"</span>]</span>
-<span id="cb14-39"><a href="#cb14-39" aria-hidden="true" tabindex="-1"></a>    points[<span class="dv">1</span>, <span class="st">"alfa"</span>]<span class="ot">=</span><span class="fu">eval</span>(<span class="fu">parse</span>(<span class="at">text=</span><span class="fu">paste0</span>(<span class="st">"alfa"</span>,action, angle)))</span>
-<span id="cb14-40"><a href="#cb14-40" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb14-41"><a href="#cb14-41" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(action<span class="sc">==</span><span class="st">"["</span>){</span>
-<span id="cb14-42"><a href="#cb14-42" aria-hidden="true" tabindex="-1"></a>    <span class="fu">data.frame</span>(<span class="at">x=</span>points[<span class="dv">1</span>, <span class="st">"x1"</span>], <span class="at">y=</span>points[<span class="dv">1</span>, <span class="st">"y1"</span>], <span class="at">alfa=</span>points[<span class="dv">1</span>, <span class="st">"alfa"</span>]) <span class="sc">%&gt;%</span></span>
-<span id="cb14-43"><a href="#cb14-43" aria-hidden="true" tabindex="-1"></a>      <span class="fu">rbind</span>(status) <span class="ot">-&gt;</span> status</span>
-<span id="cb14-44"><a href="#cb14-44" aria-hidden="true" tabindex="-1"></a>    points[<span class="dv">1</span>, <span class="st">"depth"</span>]<span class="ot">=</span>points[<span class="dv">1</span>, <span class="st">"depth"</span>]<span class="sc">+</span><span class="dv">1</span></span>
-<span id="cb14-45"><a href="#cb14-45" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb14-46"><a href="#cb14-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-47"><a href="#cb14-47" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(action<span class="sc">==</span><span class="st">"]"</span>){</span>
-<span id="cb14-48"><a href="#cb14-48" aria-hidden="true" tabindex="-1"></a>    depth<span class="ot">=</span>points[<span class="dv">1</span>, <span class="st">"depth"</span>]</span>
-<span id="cb14-49"><a href="#cb14-49" aria-hidden="true" tabindex="-1"></a>    points[<span class="sc">-</span><span class="dv">1</span>,]<span class="ot">-&gt;</span>points</span>
-<span id="cb14-50"><a href="#cb14-50" aria-hidden="true" tabindex="-1"></a>    <span class="fu">data.frame</span>(<span class="at">x1=</span>status[<span class="dv">1</span>, <span class="st">"x"</span>], <span class="at">y1=</span>status[<span class="dv">1</span>, <span class="st">"y"</span>], <span class="at">x2=</span><span class="cn">NA</span>, <span class="at">y2=</span><span class="cn">NA</span>,</span>
-<span id="cb14-51"><a href="#cb14-51" aria-hidden="true" tabindex="-1"></a>               <span class="at">alfa=</span>status[<span class="dv">1</span>, <span class="st">"alfa"</span>],</span>
-<span id="cb14-52"><a href="#cb14-52" aria-hidden="true" tabindex="-1"></a>               <span class="at">depth=</span>depth<span class="dv">-1</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb14-53"><a href="#cb14-53" aria-hidden="true" tabindex="-1"></a>      <span class="fu">rbind</span>(points) <span class="ot">-&gt;</span> points</span>
-<span id="cb14-54"><a href="#cb14-54" aria-hidden="true" tabindex="-1"></a>    status[<span class="sc">-</span><span class="dv">1</span>,]<span class="ot">-&gt;</span>status</span>
-<span id="cb14-55"><a href="#cb14-55" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb14-56"><a href="#cb14-56" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb14-57"><a href="#cb14-57" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-58"><a href="#cb14-58" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb14-59"><a href="#cb14-59" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_segment</span>(<span class="fu">aes</span>(<span class="at">x =</span> x1, <span class="at">y =</span> y1, <span class="at">xend =</span> x2, <span class="at">yend =</span> y2),</span>
-<span id="cb14-60"><a href="#cb14-60" aria-hidden="true" tabindex="-1"></a>               <span class="at">lineend =</span> <span class="st">"round"</span>,</span>
-<span id="cb14-61"><a href="#cb14-61" aria-hidden="true" tabindex="-1"></a>               <span class="at">color=</span><span class="st">"deeppink4"</span>, <span class="co"># Set your own Fall color?</span></span>
-<span id="cb14-62"><a href="#cb14-62" aria-hidden="true" tabindex="-1"></a>               <span class="at">data=</span><span class="fu">na.omit</span>(points)) <span class="sc">+</span></span>
-<span id="cb14-63"><a href="#cb14-63" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_fixed</span>(<span class="at">ratio =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb14-64"><a href="#cb14-64" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_void</span>() <span class="co"># No grid nor axes</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Define elements in plant art</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Each image corresponds to a different axiom, rules, angle and depth</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Leaf of Fall</span></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>axiom<span class="ot">=</span><span class="st">"X"</span></span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>rules<span class="ot">=</span><span class="fu">list</span>(<span class="st">"X"</span><span class="ot">=</span><span class="st">"F-[[X]+X]+F[+FX]-X"</span>, <span class="st">"F"</span><span class="ot">=</span><span class="st">"FF"</span>)</span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>angle<span class="ot">=</span><span class="fl">22.5</span></span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>depth<span class="ot">=</span><span class="dv">6</span></span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>depth) axiom<span class="ot">=</span><span class="fu">gsubfn</span>(<span class="st">"."</span>, rules, axiom)</span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a>actions<span class="ot">=</span><span class="fu">str_extract_all</span>(axiom, <span class="st">"</span><span class="sc">\\</span><span class="st">d*</span><span class="sc">\\</span><span class="st">+|</span><span class="sc">\\</span><span class="st">d*</span><span class="sc">\\</span><span class="st">-|F|L|R|</span><span class="sc">\\</span><span class="st">[|</span><span class="sc">\\</span><span class="st">]|</span><span class="sc">\\</span><span class="st">|"</span>) <span class="sc">%&gt;%</span> unlist</span>
+<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-18"><a href="#cb17-18" aria-hidden="true" tabindex="-1"></a>status<span class="ot">=</span><span class="fu">data.frame</span>(<span class="at">x=</span><span class="fu">numeric</span>(<span class="dv">0</span>), <span class="at">y=</span><span class="fu">numeric</span>(<span class="dv">0</span>), <span class="at">alfa=</span><span class="fu">numeric</span>(<span class="dv">0</span>))</span>
+<span id="cb17-19"><a href="#cb17-19" aria-hidden="true" tabindex="-1"></a>points<span class="ot">=</span><span class="fu">data.frame</span>(<span class="at">x1 =</span> <span class="dv">0</span>, <span class="at">y1 =</span> <span class="dv">0</span>, <span class="at">x2 =</span> <span class="cn">NA</span>, <span class="at">y2 =</span> <span class="cn">NA</span>, <span class="at">alfa=</span><span class="dv">90</span>, <span class="at">depth=</span><span class="dv">1</span>)</span>
+<span id="cb17-20"><a href="#cb17-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-21"><a href="#cb17-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-22"><a href="#cb17-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Generating data</span></span>
+<span id="cb17-23"><a href="#cb17-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Note: may take a minute or two</span></span>
+<span id="cb17-24"><a href="#cb17-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-25"><a href="#cb17-25" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (action <span class="cf">in</span> actions)</span>
+<span id="cb17-26"><a href="#cb17-26" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb17-27"><a href="#cb17-27" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (action<span class="sc">==</span><span class="st">"F"</span>)</span>
+<span id="cb17-28"><a href="#cb17-28" aria-hidden="true" tabindex="-1"></a>  {</span>
+<span id="cb17-29"><a href="#cb17-29" aria-hidden="true" tabindex="-1"></a>    x<span class="ot">=</span>points[<span class="dv">1</span>, <span class="st">"x1"</span>]<span class="sc">+</span><span class="fu">cos</span>(points[<span class="dv">1</span>, <span class="st">"alfa"</span>]<span class="sc">*</span>(pi<span class="sc">/</span><span class="dv">180</span>))</span>
+<span id="cb17-30"><a href="#cb17-30" aria-hidden="true" tabindex="-1"></a>    y<span class="ot">=</span>points[<span class="dv">1</span>, <span class="st">"y1"</span>]<span class="sc">+</span><span class="fu">sin</span>(points[<span class="dv">1</span>, <span class="st">"alfa"</span>]<span class="sc">*</span>(pi<span class="sc">/</span><span class="dv">180</span>))</span>
+<span id="cb17-31"><a href="#cb17-31" aria-hidden="true" tabindex="-1"></a>    points[<span class="dv">1</span>,<span class="st">"x2"</span>]<span class="ot">=</span>x</span>
+<span id="cb17-32"><a href="#cb17-32" aria-hidden="true" tabindex="-1"></a>    points[<span class="dv">1</span>,<span class="st">"y2"</span>]<span class="ot">=</span>y</span>
+<span id="cb17-33"><a href="#cb17-33" aria-hidden="true" tabindex="-1"></a>    <span class="fu">data.frame</span>(<span class="at">x1 =</span> x, <span class="at">y1 =</span> y, <span class="at">x2 =</span> <span class="cn">NA</span>, <span class="at">y2 =</span> <span class="cn">NA</span>,</span>
+<span id="cb17-34"><a href="#cb17-34" aria-hidden="true" tabindex="-1"></a>               <span class="at">alfa=</span>points[<span class="dv">1</span>, <span class="st">"alfa"</span>],</span>
+<span id="cb17-35"><a href="#cb17-35" aria-hidden="true" tabindex="-1"></a>               <span class="at">depth=</span>points[<span class="dv">1</span>,<span class="st">"depth"</span>]) <span class="sc">%&gt;%</span> <span class="fu">rbind</span>(points)<span class="ot">-&gt;</span>points</span>
+<span id="cb17-36"><a href="#cb17-36" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb17-37"><a href="#cb17-37" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (action <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"+"</span>, <span class="st">"-"</span>)){</span>
+<span id="cb17-38"><a href="#cb17-38" aria-hidden="true" tabindex="-1"></a>    alfa<span class="ot">=</span>points[<span class="dv">1</span>, <span class="st">"alfa"</span>]</span>
+<span id="cb17-39"><a href="#cb17-39" aria-hidden="true" tabindex="-1"></a>    points[<span class="dv">1</span>, <span class="st">"alfa"</span>]<span class="ot">=</span><span class="fu">eval</span>(<span class="fu">parse</span>(<span class="at">text=</span><span class="fu">paste0</span>(<span class="st">"alfa"</span>,action, angle)))</span>
+<span id="cb17-40"><a href="#cb17-40" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb17-41"><a href="#cb17-41" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(action<span class="sc">==</span><span class="st">"["</span>){</span>
+<span id="cb17-42"><a href="#cb17-42" aria-hidden="true" tabindex="-1"></a>    <span class="fu">data.frame</span>(<span class="at">x=</span>points[<span class="dv">1</span>, <span class="st">"x1"</span>], <span class="at">y=</span>points[<span class="dv">1</span>, <span class="st">"y1"</span>], <span class="at">alfa=</span>points[<span class="dv">1</span>, <span class="st">"alfa"</span>]) <span class="sc">%&gt;%</span></span>
+<span id="cb17-43"><a href="#cb17-43" aria-hidden="true" tabindex="-1"></a>      <span class="fu">rbind</span>(status) <span class="ot">-&gt;</span> status</span>
+<span id="cb17-44"><a href="#cb17-44" aria-hidden="true" tabindex="-1"></a>    points[<span class="dv">1</span>, <span class="st">"depth"</span>]<span class="ot">=</span>points[<span class="dv">1</span>, <span class="st">"depth"</span>]<span class="sc">+</span><span class="dv">1</span></span>
+<span id="cb17-45"><a href="#cb17-45" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb17-46"><a href="#cb17-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-47"><a href="#cb17-47" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(action<span class="sc">==</span><span class="st">"]"</span>){</span>
+<span id="cb17-48"><a href="#cb17-48" aria-hidden="true" tabindex="-1"></a>    depth<span class="ot">=</span>points[<span class="dv">1</span>, <span class="st">"depth"</span>]</span>
+<span id="cb17-49"><a href="#cb17-49" aria-hidden="true" tabindex="-1"></a>    points[<span class="sc">-</span><span class="dv">1</span>,]<span class="ot">-&gt;</span>points</span>
+<span id="cb17-50"><a href="#cb17-50" aria-hidden="true" tabindex="-1"></a>    <span class="fu">data.frame</span>(<span class="at">x1=</span>status[<span class="dv">1</span>, <span class="st">"x"</span>], <span class="at">y1=</span>status[<span class="dv">1</span>, <span class="st">"y"</span>], <span class="at">x2=</span><span class="cn">NA</span>, <span class="at">y2=</span><span class="cn">NA</span>,</span>
+<span id="cb17-51"><a href="#cb17-51" aria-hidden="true" tabindex="-1"></a>               <span class="at">alfa=</span>status[<span class="dv">1</span>, <span class="st">"alfa"</span>],</span>
+<span id="cb17-52"><a href="#cb17-52" aria-hidden="true" tabindex="-1"></a>               <span class="at">depth=</span>depth<span class="dv">-1</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb17-53"><a href="#cb17-53" aria-hidden="true" tabindex="-1"></a>      <span class="fu">rbind</span>(points) <span class="ot">-&gt;</span> points</span>
+<span id="cb17-54"><a href="#cb17-54" aria-hidden="true" tabindex="-1"></a>    status[<span class="sc">-</span><span class="dv">1</span>,]<span class="ot">-&gt;</span>status</span>
+<span id="cb17-55"><a href="#cb17-55" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb17-56"><a href="#cb17-56" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb17-57"><a href="#cb17-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-58"><a href="#cb17-58" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb17-59"><a href="#cb17-59" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_segment</span>(<span class="fu">aes</span>(<span class="at">x =</span> x1, <span class="at">y =</span> y1, <span class="at">xend =</span> x2, <span class="at">yend =</span> y2),</span>
+<span id="cb17-60"><a href="#cb17-60" aria-hidden="true" tabindex="-1"></a>               <span class="at">lineend =</span> <span class="st">"round"</span>,</span>
+<span id="cb17-61"><a href="#cb17-61" aria-hidden="true" tabindex="-1"></a>               <span class="at">color=</span><span class="st">"deeppink4"</span>, <span class="co"># Set your own Fall color?</span></span>
+<span id="cb17-62"><a href="#cb17-62" aria-hidden="true" tabindex="-1"></a>               <span class="at">data=</span><span class="fu">na.omit</span>(points)) <span class="sc">+</span></span>
+<span id="cb17-63"><a href="#cb17-63" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_fixed</span>(<span class="at">ratio =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb17-64"><a href="#cb17-64" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_void</span>() <span class="co"># No grid nor axes</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="assignment1_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid" width="672"></p>
 </div>
@@ -436,7 +475,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   for (var i=0; i<noterefs.length; i++) {
     const ref = noterefs[i];
     tippyHover(ref, function() {
-      let href = ref.getAttribute('href');
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
