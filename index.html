@@ -98,7 +98,7 @@ ul.task-list li input[type="checkbox"] {
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./research.html"> 
-<span class="menu-text">Research</span></a>
+<span class="menu-text">Publications</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./about.html"> 
@@ -109,11 +109,11 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Project</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./DOHYO_JEONG_CV.pdf"> 
+    <a class="nav-link" href="./cv.html"> 
 <span class="menu-text">Curriculum Vitae</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://dohyojeong.github.io/dhpractice.github.io/"> 
+    <a class="nav-link" href="https://dohyojeong.github.io/dhpractice.github.io/" target="_blank"> 
 <span class="menu-text">Research Blog</span></a>
   </li>  
 </ul>
@@ -132,7 +132,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#contact-me" id="toc-contact-me" class="nav-link active" data-scroll-target="#contact-me"><strong>Contact Me</strong></a></li>
+  <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section"></a></li>
   <li><a href="#awards-scholarships-and-honors" id="toc-awards-scholarships-and-honors" class="nav-link" data-scroll-target="#awards-scholarships-and-honors"><strong>Awards, Scholarships and Honors</strong></a></li>
   </ul>
 </nav>
@@ -148,11 +148,16 @@ ul.task-list li input[type="checkbox"] {
 <p><img src="images/clipboard-4167656976.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="275"></p>
 </figure>
 </div>
-<section id="contact-me" class="level3">
-<h3 class="anchored" data-anchor-id="contact-me"><strong>Contact Me</strong></h3>
-<p>[email] dohyo.jeong@uky.edu</p>
-<p>[LinkedIn] <a href="https://www.linkedin.com/in/dohyo-jeong-683595227/">Dohyo Jeong LinkedIn</a></p>
-<p><a href="https://scholar.google.co.kr/citations?user=6nm5vwwAAAAJ&amp;hl=en">Google Scholar</a></p>
+<section id="section" class="level3">
+<h3 class="anchored" data-anchor-id="section"></h3>
+<div class="contact-buttons">
+<div style="display:flex; justify-content:center; gap:10px; align-items:center; flex-wrap:wrap; margin-bottom:20px;">
+<p><a href="https://scholar.google.co.kr/citations?user=6nm5vwwAAAAJ&amp;hl=en" class="btn btn-outline-secondary btn-sm" target="_blank"> <i class="bi bi-mortarboard"></i> Google Scholar </a></p>
+<p><a href="https://www.linkedin.com/in/dohyo-jeong-683595227/" class="btn btn-outline-secondary btn-sm" target="_blank"> <i class="bi bi-linkedin"></i> LinkedIn </a></p>
+<p><a href="mailto:dohyo.jeong@uky.edu" class="btn btn-outline-secondary btn-sm"> <i class="bi bi-envelope-fill"></i> dohyo.jeong@uky.edu </a></p>
+</div>
+</div>
+<p><br></p>
 <p><strong>Dohyo Jeong</strong> is a Postdoctoral Scholar in the College of Medicine at the University of Kentucky. His research focuses on identifying regional disparities in healthcare accessibility and policy effectiveness, with a particular emphasis on the opioid epidemic and other public health crises. He applies a combination of spatial machine learning, econometrics, Bayesian analysis, and GIS to advance evidence-based strategies that improve equity and efficiency in healthcare delivery.</p>
 <p>His current research includes two major projects:</p>
 <ul>
@@ -314,6 +319,11 @@ ul.task-list li input[type="checkbox"] {
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
         }
       }
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
